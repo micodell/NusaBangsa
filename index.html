@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nusa Bangsa</title>
+    <style>
+        .pcu-darkblue {
+            background-color: #1A2F4A;
+        }
+
+        .univ-logo {
+            width: 20%;
+            height: 10vh;
+            object-fit: fill;
+        }
+
+        .content-img {
+            width: 100%;
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        .search {
+            width: 100%;
+            position: relative;
+            display: flex;
+        }
+
+        .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            height: 30px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #9DBFAF;
+        }
+
+        .searchTerm:focus {
+            color: #00B4CC;
+        }
+
+        .searchButton {
+            width: 40px;
+            height: 36px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .wrap {
+            width: 10%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 3s ease-in-out;
+            width: 100%;
+            /* Adjust to accommodate all slides */
+        }
+
+        .slide {
+            width: 50%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="navbar navbar-expand-sm sticky-top pcu-darkblue">
+        <div class="flex bg-light mx-2 float-left">
+            <img src="./assets/DUTA-WACANA.png" alt="" class="univ-logo mx-2">
+            <img src="./assets/MARANATHA.png" alt="" class="univ-logo mx-2">
+            <img src="./assets/UKI.png" alt="" class="univ-logo mx-2">
+            <img src="./assets/UKRIDA.png" alt="" class="univ-logo mx-2">
+            <img src="./assets/UNIV-KRISTEN-INDO.png" alt="" class="univ-logo mx-2">
+            <img src="./assets/Petra-Christian-University.png" alt="" class="univ-logo mx-2">
+        </div>
+        <div class="flex align-content-around mx-2 text-light">
+            <a class="mx-3">Tentang Kami</a>
+            <a class="mx-3">Event and News</a>
+            <ha class="mx-3">Publication</a>
+                <a class="mx-3">Contact Us</a>
+        </div>
+        <div class="form-inline mx-3">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Search">
+                <button type="submit" class="searchButton">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+        <!-- <form class="form-inline">
+            <input class="form-control mx-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0 bi bi-search" type="button"></button>
+        </form> -->
+    </header>
+
+    <div class="flex content-img text-light"
+        style="background-image: url(https://nusabangsa.petra.ac.id/wp-content/uploads/2024/11/GEDUNG-PETRA-2.jpg);">
+        <img src="./assets/DMU_PCU.png" alt="">
+        <div class="m-4">
+            <h1 class="fw-bold" style="font-size: 3.5em">PROYEK KEBANGSAAN NASIONAL 2024</h1>
+            <h3 class="fs-2">"TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU"</h3>
+        </div>
+    </div>
+
+    <!-- <div class="flexslider">
+        <div class="flex-viewport" style="overflow: hidden; position: relative;">
+
+        </div>
+        <ul class="slides" style="width: 1200%; transition-duration: 0s; transform: translate3d(-520px, 0px, 0px);">
+            <li class="clone">
+                <img src="./assets/ok-terbaru-1536x1152.jpg" />
+            </li>
+            <li>
+                <img src="./assets/quality_restoration_20241122140919047-1-768x432.jpg" />
+            </li>
+            <li>
+                <img src="./assets/quality_restoration_20241122141921163-1-768x576.jpg" />
+            </li>
+        </ul> -->
+    </div>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="./assets/ok-terbaru-1536x1152.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="./assets/quality_restoration_20241122140919047-1-768x432.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="./assets/quality_restoration_20241122141921163-1-768x576.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="./assets/P1060006.JPG" alt="Slide 4">
+            </div>
+        </div>
+    </div>
+
+    <div class="pcu-darkblue"></div>
+
+</body>
+
+<script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length/2; // Total slides including duplicates
+    let currentIndex = 0; // Start at the first original slide (after the duplicated last slide)
+
+    // Set the initial position to the first original slide
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    function showNextSlide() {
+        currentIndex++;
+        slides.style.transition = 'transform 1s ease-in-out'; // Enable smooth transition
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // When we reach the duplicated last slide, reset back to the first original slide
+        if (currentIndex === slideCount - 1) {
+            setTimeout(() => {
+                slides.style.transition = 'none'; // Disable transition for instant reset
+                currentIndex = 1; // Reset to the first original slide
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 1000); // Match the transition duration
+        }
+    }
+
+    function showPrevSlide() {
+        currentIndex--;
+        slides.style.transition = 'transform 1s ease-in-out'; // Enable smooth transition
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // When we reach the duplicated first slide, reset back to the last original slide
+        if (currentIndex === 0) {
+            setTimeout(() => {
+                slides.style.transition = 'none'; // Disable transition for instant reset
+                currentIndex = slideCount - 4; // Reset to the last original slide
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 1000); // Match the transition duration
+        }
+    }
+
+    // Automatically change slides every 3 seconds
+    setInterval(showNextSlide, 3000);
+
+
+</script>
+
+</html>
