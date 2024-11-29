@@ -10,10 +10,20 @@
             background-color: #1A2F4A;
         }
 
+        .pcu-semidarkblue {
+            background-color: #273656;
+        }
+
+        .pcu-yellow {
+            color: #F8AD3D;
+        }
+
         .univ-logo {
             width: 20%;
             height: 10vh;
-            object-fit: fill;
+            object-fit: contain;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
         }
 
         .content-img {
@@ -25,37 +35,32 @@
 
         @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-        .search {
+        .search-bar {
             width: 100%;
             position: relative;
-            display: flex;
+            /* align-items: center;
+            display: flex; */
         }
 
-        .searchTerm {
+        .search-field {
             width: 100%;
-            border: 3px solid #00B4CC;
+            padding: 1rem;
+            height: 2.3rem;
+            border-radius: 5px;
             border-right: none;
-            padding: 5px;
-            height: 30px;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-            color: #9DBFAF;
+            font-size: 1rem;
         }
 
-        .searchTerm:focus {
-            color: #00B4CC;
-        }
-
-        .searchButton {
-            width: 40px;
-            height: 36px;
-            border: 1px solid #00B4CC;
-            background: #00B4CC;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 5px 5px 0;
+        .search-button {
+            position: absolute;
+            right: 1rem;
+            top: 42%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            color: #1A2F4A;
+            font-size: 1.2rem;
             cursor: pointer;
-            font-size: 20px;
         }
 
         .wrap {
@@ -71,24 +76,25 @@
             width: 100%;
             height: 50vh;
             overflow: hidden;
+            display: flex;
+            align-items: center;
         }
 
         .slides {
             display: flex;
-            transition: transform 3s ease-in-out;
-            width: 100%;
-            /* Adjust to accommodate all slides */
+            transition: transform 3s ease-out;
         }
 
         .slide {
-            width: 50%;
-            flex-shrink: 0;
+            width: 100vw;
+            padding: 1rem;
         }
 
         .slide img {
-            width: 100%;
-            height: auto;
+            width: 120%;
+            height: 60vh;
             display: block;
+            object-fit: contain;
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -101,124 +107,204 @@
 </head>
 
 <body>
-    <header class="navbar navbar-expand-sm sticky-top pcu-darkblue">
-        <div class="flex bg-light mx-2 float-left">
-            <img src="./assets/DUTA-WACANA.png" alt="" class="univ-logo mx-2">
-            <img src="./assets/MARANATHA.png" alt="" class="univ-logo mx-2">
-            <img src="./assets/UKI.png" alt="" class="univ-logo mx-2">
-            <img src="./assets/UKRIDA.png" alt="" class="univ-logo mx-2">
-            <img src="./assets/UNIV-KRISTEN-INDO.png" alt="" class="univ-logo mx-2">
-            <img src="./assets/Petra-Christian-University.png" alt="" class="univ-logo mx-2">
+    <header class="navbar navbar-expand-sm sticky-top pcu-darkblue justify-content-around">
+        <div class="flex bg-light mx-2 float-left rounded-2">
+            <img src="./assets/DUTA-WACANA.png" alt="" class="univ-logo">
+            <img src="./assets/MARANATHA.png" alt="" class="univ-logo">
+            <img src="./assets/UKI.png" alt="" class="univ-logo">
+            <img src="./assets/UKRIDA.png" alt="" class="univ-logo">
+            <img src="./assets/UNIV-KRISTEN-INDO.png" alt="" class="univ-logo">
+            <img src="./assets/Petra-Christian-University.png" alt="" class="univ-logo">
         </div>
         <div class="flex align-content-around mx-2 text-light">
-            <a class="mx-3">Tentang Kami</a>
-            <a class="mx-3">Event and News</a>
-            <ha class="mx-3">Publication</a>
-                <a class="mx-3">Contact Us</a>
+            <a class="mx-3" href="https://dmu.petra.ac.id/">Tentang Kami</a>
+            <a class="mx-3" href="#event-and-news">Event and News</a>
+            <a class="mx-3">Publication</a>
+            <a class="mx-3">Contact Us</a>
         </div>
-        <div class="form-inline mx-3">
-            <div class="search">
-                <input type="text" class="searchTerm" placeholder="Search">
-                <button type="submit" class="searchButton">
+        <form class="flex form-inline justify-content-end mx-2" role="search">
+            <div class="search-bar">
+                <input type="search" class="search-field" placeholder="Search">
+                <button type="submit" class="search-button">
                     <i class="bi bi-search"></i>
                 </button>
             </div>
-        </div>
-        <!-- <form class="form-inline">
-            <input class="form-control mx-1" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0 bi bi-search" type="button"></button>
-        </form> -->
+        </form>
     </header>
 
     <div class="flex content-img text-light"
         style="background-image: url(https://nusabangsa.petra.ac.id/wp-content/uploads/2024/11/GEDUNG-PETRA-2.jpg);">
-        <img src="./assets/DMU_PCU.png" alt="">
+        <img src="./assets/DMU_PCU.png" alt="" style="width: 30%; height: 50vh;">
         <div class="m-4">
-            <h1 class="fw-bold" style="font-size: 3.5em">PROYEK KEBANGSAAN NASIONAL 2024</h1>
-            <h3 class="fs-2">"TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU"</h3>
+            <h1 class="fw-bold mx-1" style="font-size: 4em">PROYEK KEBANGSAAN NASIONAL 2024</h1>
+            <h3 class="fw-semibold fs-1 mx-1">" TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU "</h3>
         </div>
     </div>
 
-    <!-- <div class="flexslider">
-        <div class="flex-viewport" style="overflow: hidden; position: relative;">
-
-        </div>
-        <ul class="slides" style="width: 1200%; transition-duration: 0s; transform: translate3d(-520px, 0px, 0px);">
-            <li class="clone">
-                <img src="./assets/ok-terbaru-1536x1152.jpg" />
-            </li>
-            <li>
-                <img src="./assets/quality_restoration_20241122140919047-1-768x432.jpg" />
-            </li>
-            <li>
-                <img src="./assets/quality_restoration_20241122141921163-1-768x576.jpg" />
-            </li>
-        </ul> -->
-    </div>
-
-    <div class="slider">
+    <div class="slider my-5">
         <div class="slides">
-            <div class="slide">
-                <img src="./assets/ok-terbaru-1536x1152.jpg" alt="Slide 1">
+            <div class="slide row justify-content-around">
+                <div class="col-lg-5">
+                    <img src="./assets/ok-terbaru-1536x1152.jpg" alt="Slide 1">
+                </div>
+                <div class="col-lg-6 m-3">
+                    <p class="fs-5 text-justify my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+                        voluptatibus eaque repudiandae architecto nihil explicabo pariatur aut dolorum animi. Iusto
+                        debitis perspiciatis adipisci odit perferendis provident eos eum! Hic, aspernatur culpa autem
+                        libero, similique, quam corporis illo inventore odit voluptatum explicabo repellendus quas vel!
+                        Iusto repellat ut, hic impedit sequi sapiente repellendus fuga laboriosam asperiores officia
+                        distinctio expedita sed amet, pariatur tempora omnis id vitae autem? Nam error eaque ipsum.</p>
+                    <button class="btn btn-outline-secondary float-end mt-2" type="button" onclick="">READ MORE</button>
+                </div>
             </div>
-            <div class="slide">
-                <img src="./assets/quality_restoration_20241122140919047-1-768x432.jpg" alt="Slide 2">
+            <div id="event-and-news" class="slide row justify-content-around">
+                <div class="col-lg-5">
+                    <img src="./assets/quality_restoration_20241122140919047-1-768x432.jpg" alt="Slide 1">
+                </div>
+                <div class="col-lg-6 m-3">
+                    <p class="fs-5 text-justify my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+                        voluptatibus eaque repudiandae architecto nihil explicabo pariatur aut dolorum animi. Iusto
+                        debitis perspiciatis adipisci odit perferendis provident eos eum! Hic, aspernatur culpa autem
+                        libero, similique, quam corporis illo inventore odit voluptatum explicabo repellendus quas vel!
+                        Iusto repellat ut, hic impedit sequi sapiente repellendus fuga laboriosam asperiores officia
+                        distinctio expedita sed amet, pariatur tempora omnis id vitae autem? Nam error eaque ipsum.</p>
+                    <button class="btn btn-outline-secondary float-end mt-2" type="button" onclick="">READ MORE</button>
+                </div>
             </div>
-            <div class="slide">
-                <img src="./assets/quality_restoration_20241122141921163-1-768x576.jpg" alt="Slide 3">
+            <div class="slide row justify-content-around">
+                <div class="col-lg-5">
+                    <img src="./assets/quality_restoration_20241122141921163-1-768x576.jpg" alt="Slide 1">
+                </div>
+                <div class="col-lg-6 m-3">
+                    <p class="fs-5 text-justify my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+                        voluptatibus eaque repudiandae architecto nihil explicabo pariatur aut dolorum animi. Iusto
+                        debitis perspiciatis adipisci odit perferendis provident eos eum! Hic, aspernatur culpa autem
+                        libero, similique, quam corporis illo inventore odit voluptatum explicabo repellendus quas vel!
+                        Iusto repellat ut, hic impedit sequi sapiente repellendus fuga laboriosam asperiores officia
+                        distinctio expedita sed amet, pariatur tempora omnis id vitae autem? Nam error eaque ipsum.</p>
+                    <button class="btn btn-outline-secondary float-end mt-2" type="button" onclick="">READ MORE</button>
+                </div>
             </div>
-            <div class="slide">
-                <img src="./assets/P1060006.JPG" alt="Slide 4">
+            <div class="slide row justify-content-around">
+                <div class="col-lg-5">
+                    <img src="./assets/P1060006.JPG" alt="Slide 1">
+                </div>
+                <div class="col-lg-6 m-3">
+                    <p class="fs-5 text-justify my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+                        voluptatibus eaque repudiandae architecto nihil explicabo pariatur aut dolorum animi. Iusto
+                        debitis perspiciatis adipisci odit perferendis provident eos eum! Hic, aspernatur culpa autem
+                        libero, similique, quam corporis illo inventore odit voluptatum explicabo repellendus quas vel!
+                        Iusto repellat ut, hic impedit sequi sapiente repellendus fuga laboriosam asperiores officia
+                        distinctio expedita sed amet, pariatur tempora omnis id vitae autem? Nam error eaque ipsum.</p>
+                    <button class="btn btn-outline-secondary float-end mt-2" type="button" onclick="">READ MORE</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="pcu-darkblue"></div>
+    <div class="pcu-darkblue text-light my-5 py-5">
+        <div class="row justify-content-around">
+            <div class="col-lg-6 mx-3 mt-3">
+                <p class="fs-5 text-justify my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga
+                    voluptatibus eaque repudiandae architecto nihil explicabo pariatur aut dolorum animi. Iusto
+                    debitis perspiciatis adipisci odit perferendis provident eos eum! Hic, aspernatur culpa autem
+                    libero, similique, quam corporis illo inventore odit voluptatum explicabo repellendus quas vel!
+                    Iusto repellat ut, hic impedit sequi sapiente repellendus fuga laboriosam asperiores officia
+                    distinctio expedita sed amet, pariatur tempora omnis id vitae autem? Nam error eaque ipsum.</p>
+                <button class="btn btn-outline-secondary float-end mt-2" type="button" onclick="">READ MORE</button>
+            </div>
+            <div class="col-lg-5">
+                <img src="./assets/Screenshot-2024-11-22-035006.png" alt="Slide 1">
+            </div>
+        </div>
+    </div>
+
+    <h4 class="mx-5 text-center fs-4">OUR PARTNERS</h4>
+    <div class="flex m-5">
+        <img src="./assets/DUTA-WACANA.png" alt="" class=" univ-logo">
+        <img src="./assets/MARANATHA.png" alt="" class=" univ-logo">
+        <img src="./assets/UKI.png" alt="" class=" univ-logo">
+        <img src="./assets/UKRIDA.png" alt="" class=" univ-logo">
+        <img src="./assets/UNIV-KRISTEN-INDO.png" alt="" class=" univ-logo">
+        <img src="./assets/Petra-Christian-University.png" alt="" class=" univ-logo">
+    </div>
+
+    <footer class="row pcu-semidarkblue text-light p-5">
+        <div class="col-lg-5 d-flex">
+            <a href="https://petra.ac.id">
+                <img src="./assets/footer-1536x370.png" alt="" class="h-16">
+            </a>
+            <a href="https://dmu.petra.ac.id/">
+                <img src="./assets/DMU_PCU.png" alt="" class="h-16">
+            </a>
+        </div>
+        <div class="col-lg-2">
+            <p class="pcu-yellow fw-bold pb-2.5" style="font-size: 0.8em;">ALAMAT</p>
+            <p>Jl. Siwalankerto No.121-131, Siwalankerto, Kec. Wonocolo, Kota SBY, Jawa Timur 60236</p>
+        </div>
+        <div class="col-lg-2">
+            <p class="pcu-yellow fw-bold pb-2.5" style="font-size: 0.8em;">KONTAK</p>
+            <p>T: +62 31 8494830,
+                +62 31 8494831,
+                +62 31 8439040,
+                +62 31 2983000
+
+                F: +62 31 8436418
+                E: info@petra.ac.id</p>
+        </div>
+        <div class="sm:flex sm:items-center sm:justify-center pt-lg-5">
+            <span class="text-sm text-light dark:text-gray-00">© 2024
+                <a href="">DMU PCU</a>. All Rights Reserved
+            </span>
+        </div>
+    </footer>
+
 
 </body>
 
 <script>
-    const slides = document.querySelector('.slides');
-    const slideCount = document.querySelectorAll('.slide').length/2; // Total slides including duplicates
-    let currentIndex = 0; // Start at the first original slide (after the duplicated last slide)
+    const slider = document.querySelector('.slides');
+    const slides = document.querySelectorAll('.slide');
+    const slideStyle = getComputedStyle(slides[0]);
+    const slideWidth = slides[0].offsetWidth + parseInt(slideStyle.marginLeft) + parseInt(slideStyle.marginRight);
 
-    // Set the initial position to the first original slide
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    let currentIndex = 0;
 
-    function showNextSlide() {
+    // Duplikasi slide untuk efek loop
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        slider.appendChild(clone); // Tambahkan duplikasi di akhir
+    });
+
+    // Duplikasi slide ke awal untuk transisi smooth
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        slider.insertBefore(clone, slider.firstChild); // Tambahkan duplikasi di awal
+    });
+
+    // Atur posisi awal slider tanpa animasi
+    slider.style.transition = 'none';
+    // Update posisi awal slider
+    slider.style.transform = `translateX(-${slides.length * slideWidth}px)`;
+
+    // Fungsi untuk menggeser slider
+    function moveSlider() {
         currentIndex++;
-        slides.style.transition = 'transform 1s ease-in-out'; // Enable smooth transition
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        slider.style.transition = 'transform 0.5s ease-out';
+        slider.style.transform = `translateX(-${(slides.length + currentIndex) * slideWidth}px)`;
 
-        // When we reach the duplicated last slide, reset back to the first original slide
-        if (currentIndex === slideCount - 1) {
+        // Reset posisi saat mencapai slide duplikat terakhir
+        if (currentIndex >= slides.length) {
             setTimeout(() => {
-                slides.style.transition = 'none'; // Disable transition for instant reset
-                currentIndex = 1; // Reset to the first original slide
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }, 1000); // Match the transition duration
+                slider.style.transition = 'none'; // Matikan animasi sejenak
+                currentIndex = 0; // Reset indeks
+                slider.style.transform = `translateX(-${slides.length * slideWidth}px)`; // Kembali ke posisi awal sebenarnya
+            }, 500); // Tunggu hingga animasi selesai
         }
     }
 
-    function showPrevSlide() {
-        currentIndex--;
-        slides.style.transition = 'transform 1s ease-in-out'; // Enable smooth transition
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        // When we reach the duplicated first slide, reset back to the last original slide
-        if (currentIndex === 0) {
-            setTimeout(() => {
-                slides.style.transition = 'none'; // Disable transition for instant reset
-                currentIndex = slideCount - 4; // Reset to the last original slide
-                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-            }, 1000); // Match the transition duration
-        }
-    }
-
-    // Automatically change slides every 3 seconds
-    setInterval(showNextSlide, 3000);
-
-
+    // Loop otomatis
+    setInterval(moveSlider, 3000);
 </script>
 
 </html>
