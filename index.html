@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nusa Bangsa</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         .header {
             background-color: #1a2f4a00;
@@ -45,121 +46,17 @@
             z-index: 1;
         }
 
-        .pcu-darkblue {
-            background-color: #1A2F4A;
-        }
-
-        .pcu-semidarkblue {
-            background-color: #273656;
-        }
-
-        .pcu-yellow {
-            color: #F8AD3D;
-        }
-
-        .pcu-darkyellow {
-            color: #F8AD3D;
-        }
-
-        .univ-logo {
-            width: 20%;
-            height: 10vh;
-            object-fit: contain;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-        }
-
-        .univ-logo:hover {
-            background-color: white;
-            border-radius: 5%;
-            padding: 0.1rem;
-            /* lebih kecil */
-            transition: background-color 200ms linear;
-        }
-
-        .content-img {
-            width: 100%;
-            height: 50vh;
-            background-size: cover;
-            background-position: center;
-            position: absolute;
-            top: 7rem;
-        }
-
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
-        .search-bar {
-            width: 100%;
+        .a_header {
+            margin: 0rem 1rem 0rem 1rem;
+            font-weight: bold;
+            display: inline-block;
             position: relative;
-            /* align-items: center;
-            display: flex; */
         }
 
-        .search-field {
-            width: 100%;
-            padding: 1rem;
-            height: 2.3rem;
-            border-radius: 5px;
-            border-right: none;
-            font-size: 1rem;
-            background-color: white;
-            transition: background-color 200ms linear;
-        }
-
-        .search-field.scrolled {
-            background-color: lightgray;
-            transition: background-color 200ms linear;
-        }
-
-        .search-button {
-            position: absolute;
-            right: 1rem;
-            top: 42%;
-            transform: translateY(-50%);
-            background-color: transparent;
-            border: none;
-            color: #1A2F4A;
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        .wrap {
-            width: 10%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .slider {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            margin: 5rem 0rem 5rem 0rem;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 3s ease-out;
-        }
-
-        .slide {
-            display: flex;
-            justify-content: center;
-            align-items: start;
-
-            width: 100vw;
-            margin: 1rem;
-        }
-
-        .slide img {
-            width: 120%;
-            height: 60vh;
-            display: block;
-            object-fit: contain;
+        .a_header:hover {
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            transform: scaleX(1);
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -177,18 +74,40 @@
     <div class="banner">
         <header class="navbar navbar-expand-sm justify-content-around header">
             <div class="flex mx-2 float-left rounded-2">
-                <img src="./assets/DUTA-WACANA.png" alt="" class="univ-logo">
-                <img src="./assets/MARANATHA.png" alt="" class="univ-logo">
-                <img src="./assets/UKI.png" alt="" class="univ-logo">
-                <img src="./assets/UKRIDA.png" alt="" class="univ-logo">
-                <img src="./assets/UKI-MAKASSAR.png" alt="" class="univ-logo">
-                <img src="./assets/Petra-Christian-University.png" alt="" class="univ-logo">
+                <a href="" class="univ-logo">
+                    <img src="./assets/DUTA-WACANA.png" alt="">
+                </a>
+                <a href="" class="univ-logo">
+                    <img src="./assets/MARANATHA.png" alt="">
+                </a>
+                <a href="" class="univ-logo">
+                    <img src="./assets/UKI.png" alt="">
+                </a>
+                <a href="" class="univ-logo">
+                    <img src="./assets/UKRIDA.png" alt="">
+                </a>
+                <a href="" class="univ-logo">
+                    <img src="./assets/UKI-MAKASSAR.png" alt="">
+                </a>
+                <a href="https://dmu.petra.ac.id" class="univ-logo">
+                    <img src="./assets/Petra-Christian-University.png" alt="">
+                </a>
             </div>
             <div class="flex align-content-around mx-2">
-                <a class="mx-3 fw-semibold" href="https://dmu.petra.ac.id/">Tentang Kami</a>
-                <a class="mx-3 fw-semibold" href="#event-and-news">Event and News</a>
-                <a class="mx-3 fw-semibold">Publication</a>
-                <a class="mx-3 fw-semibold">Contact Us</a>
+                <a class="a_header" href="https://dmu.petra.ac.id/">Tentang Kami</a>
+                <a class="a_header" href="#event_and_news">Event and News</a>
+                <!-- <a class="a_header dropdown">Publication</a> -->
+                <div class="dropdown">
+                    <button class="a_header dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Publication
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="books.html">Books</a></li>
+                        <li><a class="dropdown-item" href="https://genta.petra.ac.id/?s=dmu">News</a></li>
+                    </ul>
+                </div>
+                <a class="a_header" href="mailto:dmu@petra.ac.id">Contact Us</a>
             </div>
             <form class="flex form-inline justify-content-end mx-2" role="search">
                 <div class="search-bar">
@@ -203,16 +122,14 @@
         <div class="flex content-img text-light justify-content-center">
             <div class="m-4 align-content-center z-2">
                 <h1 class="fw-bold ml-1 mt-6" style="font-size: 5em">PROYEK KEBANGSAAN NASIONAL 2024</h1>
-                <h3 class="fw-semibold fs-1 ml-1 my-3 text-center">" TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU "</h3>
+                <h3 class="fw-semibold fs-1 ml-1 my-3 text-center">" TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU
+                    "</h3>
             </div>
         </div>
     </div>
 
 
-
-
-
-    <div id="event-and-news" class="slider">
+    <div id="event_and_news" class="slider">
         <div class="slides">
             <div class="slide row">
                 <div class="col-lg-5">
@@ -292,15 +209,27 @@
 
     <h4 class="mx-5 text-center fs-4">OUR PARTNERS</h4>
     <div class="flex m-5">
-        <img src="./assets/DUTA-WACANA.png" alt="" class=" univ-logo">
-        <img src="./assets/MARANATHA.png" alt="" class=" univ-logo">
-        <img src="./assets/UKI.png" alt="" class=" univ-logo">
-        <img src="./assets/UKRIDA.png" alt="" class=" univ-logo">
-        <img src="./assets/UKI-MAKASSAR.png" alt="" class=" univ-logo">
-        <img src="./assets/Petra-Christian-University.png" alt="" class=" univ-logo">
+        <a href="" class="univ-logo">
+            <img src="./assets/DUTA-WACANA.png" alt="">
+        </a>
+        <a href="" class="univ-logo">
+            <img src="./assets/MARANATHA.png" alt="">
+        </a>
+        <a href="" class="univ-logo">
+            <img src="./assets/UKI.png" alt="">
+        </a>
+        <a href="" class="univ-logo">
+            <img src="./assets/UKRIDA.png" alt="">
+        </a>
+        <a href="" class="univ-logo">
+            <img src="./assets/UKI-MAKASSAR.png" alt="">
+        </a>
+        <a href="https://dmu.petra.ac.id" class="univ-logo">
+            <img src="./assets/Petra-Christian-University.png" alt="">
+        </a>
     </div>
 
-    <footer class="row pcu-semidarkblue text-light p-5">
+    <footer id="contact_us" class="row pcu-semidarkblue text-light p-5">
         <div class="col-lg-5 d-flex">
             <a href="https://petra.ac.id">
                 <img src="./assets/footer-1536x370.png" alt="" class="h-16">
@@ -309,19 +238,30 @@
                 <img src="./assets/DMU_PCU.png" alt="" class="h-16">
             </a>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2 my-2">
             <p class="pcu-yellow fw-bold pb-2.5" style="font-size: 0.8em;">ALAMAT</p>
             <p>Jl. Siwalankerto No.121-131, Siwalankerto, Kec. Wonocolo, Kota SBY, Jawa Timur 60236</p>
         </div>
-        <div class="col-lg-2">
+        <div class="col-lg-2 my-2">
             <p class="pcu-yellow fw-bold pb-2.5" style="font-size: 0.8em;">KONTAK</p>
             <p>T: +62 31 8494830,
+                <br>
                 +62 31 8494831,
+                <br>
                 +62 31 8439040,
+                <br>
                 +62 31 2983000
-
+                <br><br>
                 F: +62 31 8436418
-                E: info@petra.ac.id</p>
+                <br>
+                E: dmu@petra.ac.id
+            </p>
+        </div>
+        <div class="col-lg-2 my-2">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5116.448452384498!2d112.73440847605691!3d-7.339031972191857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4867925b0b%3A0xd06ae2d4f0af3f59!2sPetra%20Christian%20University!5e1!3m2!1sen!2sid!4v1734098022448!5m2!1sen!2sid"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="sm:flex sm:items-center sm:justify-center pt-lg-5 mt-lg-5 pt-md-5 mt-md-5 pt-sm-5 mt-sm-5">
             <span class="text-sm text-light dark:text-gray-00">© 2024
@@ -332,19 +272,17 @@
 
 
 </body>
-
 <script>
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 1) {
-            $(".header").addClass("scrolled");
-            $(".search-field").addClass("scrolled");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 1) {
+            document.querySelector(".header").classList.add("scrolled");
+            document.querySelector(".search-field").classList.add("scrolled");
+        } else {
+            document.querySelector(".header").classList.remove("scrolled");
+            document.querySelector(".search-field").classList.remove("scrolled");
         }
-        else {
-            $(".header").removeClass("scrolled");
-            $(".search-field").removeClass("scrolled");
-        }
-    })
-
+    });
+    
     const slider = document.querySelector('.slides');
     const slides = document.querySelectorAll('.slide');
     const slideStyle = getComputedStyle(slides[0]);
