@@ -70,10 +70,10 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #F2F3F7;">
+<body class="flex flex-col" style="background-color: #F2F3F7;">
     <div class="banner">
         <header class="navbar navbar-expand-sm justify-content-around header">
-            <div class="flex mx-2 float-left rounded-2">
+            <div class="flex sm:justify-center mx-2 float-left rounded-2">
                 <a href="" class="univ-logo">
                     <img src="./assets/DUTA-WACANA.png" alt="">
                 </a>
@@ -103,11 +103,33 @@
                         Publication
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="books.html">Books</a></li>
-                        <li><a class="dropdown-item" href="https://genta.petra.ac.id/?s=dmu">News</a></li>
+                        <li>
+                            <a class="dropdown-" href="books.html">
+                            <i class="bi bi-journal text-[#273656]"></i> Books</a>
+                        </li>
+                        <li>
+                            <a class="" href="https://genta.petra.ac.id/?s=dmu">
+                                <i class="bi bi-newspaper text-[#273656]"></i> News</a>
+                        </li>
                     </ul>
                 </div>
-                <a class="a_header" href="mailto:dmu@petra.ac.id">Contact Us</a>
+                <!-- <a class="a_header" href="mailto:dmu@petra.ac.id">Contact Us</a> -->
+                <div class="dropdown">
+                    <button class="a_header dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Contact Us
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="" href="https://api.whatsapp.com/send?phone=6281234067323">
+                            <i class="bi bi-whatsapp text-[#25d366]"></i> Whatsapp</a>
+                        </li>
+                        <li>
+                            <a class="" href="mailto:dmu@petra.ac.id">
+                            <i class="bi bi-envelope text-rose-600"></i> Email</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <form class="flex form-inline justify-content-end mx-2" role="search">
                 <div class="search-bar">
@@ -121,8 +143,8 @@
 
         <div class="flex content-img text-light justify-content-center">
             <div class="m-4 align-content-center z-2">
-                <h1 class="fw-bold ml-1 mt-6" style="font-size: 5em">PROYEK KEBANGSAAN NASIONAL 2024</h1>
-                <h3 class="fw-semibold fs-1 ml-1 my-3 text-center">" TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU
+                <h1 class="fw-bold ml-1 mt-6 text-6xl">PROYEK KEBANGSAAN NASIONAL 2024</h1>
+                <h3 class="fw-semibold text-4xl ml-1 my-3 text-center">" TRANSFORMASI MASYARAKAT MENYONGSONG INDONESIA MAJU
                     "</h3>
             </div>
         </div>
@@ -230,7 +252,7 @@
     </div>
 
     <footer id="contact_us" class="row pcu-semidarkblue text-light p-5">
-        <div class="col-lg-5 d-flex">
+        <div class="col-lg-4 d-flex">
             <a href="https://petra.ac.id">
                 <img src="./assets/footer-1536x370.png" alt="" class="h-16">
             </a>
@@ -260,7 +282,7 @@
         <div class="col-lg-2 my-2">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5116.448452384498!2d112.73440847605691!3d-7.339031972191857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb4867925b0b%3A0xd06ae2d4f0af3f59!2sPetra%20Christian%20University!5e1!3m2!1sen!2sid!4v1734098022448!5m2!1sen!2sid"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                width="360" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="sm:flex sm:items-center sm:justify-center pt-lg-5 mt-lg-5 pt-md-5 mt-md-5 pt-sm-5 mt-sm-5">
@@ -282,7 +304,7 @@
             document.querySelector(".search-field").classList.remove("scrolled");
         }
     });
-    
+
     const slider = document.querySelector('.slides');
     const slides = document.querySelectorAll('.slide');
     const slideStyle = getComputedStyle(slides[0]);
